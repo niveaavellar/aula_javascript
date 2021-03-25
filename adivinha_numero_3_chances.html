@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha(){
+		document.write("<br>");
+	}
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+	var tentativa = 1;
+	var n = parseInt(prompt("Vamos jogar! Você deve adivinhar um número de 0 a...?"));
+	var chute = parseInt(prompt("Ok! Você tem 3 chances. Qual número você chuta?"));
+	var numeropensado = Math.round(Math.random()*n);
+
+
+
+		while(tentativa<3 && numeropensado!=chute){
+			if(numeropensado==chute){mostra("acertô")}else{
+			if(numeropensado>chute){
+				var chute = parseInt(prompt("Você errou! O seu chute é menor que o número correto! Chute outro."));
+			}else{
+				var chute = parseInt(prompt("Você errou! O seu chute é maior que o número correto! Chute outro."));
+			}
+		}
+		tentativa++
+		}
+
+
+	if(numeropensado!=chute){
+
+	mostra("Você errou tudo! O número era "+ numeropensado + "!");} else{mostra("issae, era "+numeropensado)}
+
+
+
+</script>

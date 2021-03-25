@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha () {
+
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function calculaImc(altura, peso) {
+			return peso/(altura*altura);
+
+	}
+
+	var nome = prompt("Qual o seu nome?")
+	var alturaInformada = prompt("Olá, "+ nome + "! Qual sua altura? (use ponto, não vírgula)");
+	var pesoInformado = prompt(nome + ", me fale o seu peso: ");
+	var imc = calculaImc(alturaInformada, pesoInformado);
+
+
+	if(imc < 18.5){
+
+	mostra("O seu imc, " + nome + ", é " + imc + "! Você tem anorexia?? Você devia comer mais!!");
+	//"https://tenor.com/embed.js"
+	}
+
+	if(imc >= 18.5 && imc <= 35){
+
+		mostra("O seu imc, " + nome + ", é " + imc + "! É um índice saudável! Coma este hamburguer!");
+		//https://tenor.com/embed.js
+	}
+
+	if(35 < imc){
+
+	mostra("O seu imc, " + nome + ", é " + imc + "! OMG! Você precisa emagrecer!");
+	//"https://tenor.com/embed.js"
+	}
+
+</script>
